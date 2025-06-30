@@ -42,19 +42,6 @@ const VoterPanel = () => {
       walletConnected: 'Wallet Connected',
       voterVerified: 'Voter Verified',
       voteConfirmed: 'Vote Confirmed'
-    },
-    hi: {
-      title: 'ब्लॉकवोट - मतदाता पोर्टल',
-      login: 'लॉग इन',
-      register: 'पंजीकरण',
-      vote: 'मतदान',
-      results: 'परिणाम',
-      connectWallet: 'मेटामास्क कनेक्ट करें',
-      castVote: 'मत डालें',
-      confirmVote: 'मत की पुष्टि करें',
-      walletConnected: 'वॉलेट कनेक्टेड',
-      voterVerified: 'मतदाता सत्यापित',
-      voteConfirmed: 'मत की पुष्टि'
     }
   };
 
@@ -119,24 +106,7 @@ const VoterPanel = () => {
   if (!isLoggedIn) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <header className="bg-white shadow-sm border-b">
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <Users className="h-8 w-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-              >
-                <Globe className="h-4 w-4 mr-1" />
-                {language === 'en' ? 'हिंदी' : 'English'}
-              </Button>
-            </div>
-          </div>
-        </header>
+        
 
         <div className="container mx-auto px-4 py-16 flex justify-center">
           <Card className="w-full max-w-md">

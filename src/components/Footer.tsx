@@ -28,7 +28,7 @@ const Footer = () => {
   const socialLinks = [
     { name: 'Twitter', icon: '📱', href: '#' },
     { name: 'LinkedIn', icon: '💼', href: '#' },
-    { name: 'GitHub', icon: '🐙', href: '#' },
+    { name: 'GitHub', icon: 'https://img.icons8.com/?size=100&id=62856&format=png&color=000000', href: '#' },
   ];
 
   return (
@@ -82,8 +82,7 @@ const Footer = () => {
               ))}
             </div>
             <p className="text-sm text-gray-400">
-              contact@blockvote.com<br />
-              +1 (555) 123-4567
+              vedantbankewar2327@gmail.com<br />
             </p>
           </div>
         </div>
@@ -91,7 +90,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 BlockVote. All rights reserved. Powered by Ethereum blockchain.
+            © BlockVote. All rights reserved. Powered by Ethereum blockchain.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
