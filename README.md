@@ -47,7 +47,7 @@ Make sure you have the following installed/configured:
 ### 1. Clone the Repository
 
 ```bash
-git clone [<YOUR_GIT_URL>](https://github.com/VedantBankewar/block-vote)
+git clone https://github.com/VedantBankewar/block-vote
 cd blockvote
 ```
 ### 2. Install Dependencies
