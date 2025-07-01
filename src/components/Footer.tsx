@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield } from 'lucide-react';
+import { Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
   const footerSections = [
@@ -26,10 +27,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', icon: '📱', href: '#' },
-    { name: 'LinkedIn', icon: '💼', href: '#' },
-    { name: 'GitHub', icon: 'https://img.icons8.com/?size=100&id=62856&format=png&color=000000', href: '#' },
-  ];
+  { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: '#' },
+  { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: '#' },
+  { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: 'https://github.com/VedantBankewar' },
+];
 
   return (
     <footer className="bg-gray-900 text-white py-12 relative">
@@ -67,25 +68,28 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold font-heading mb-4">Connect</h3>
-            <div className="flex space-x-4 mb-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-                  aria-label={social.name}
-                >
-                  <span className="sr-only">{social.name}</span>
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-            <p className="text-sm text-gray-400">
-              vedantbankewar2327@gmail.com<br />
-            </p>
-          </div>
-        </div>
+  <h3 className="font-bold font-heading mb-4">Connect</h3>
+  <div className="flex space-x-4 mb-4">
+    {socialLinks.map((social) => (
+      <div
+        key={social.name}
+        onClick={() => window.open(social.href, '_blank')}
+        className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl cursor-pointer"
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => e.key === 'Enter' && window.open(social.href, '_blank')}
+        aria-label={social.name}
+      >
+        <span className="sr-only">{social.name}</span>
+        {social.icon}
+      </div>
+    ))}
+  </div>
+  <p className="text-sm text-gray-400">
+    vedantbankewar2327@gmail.com<br />
+  </p>
+</div>
+</div>
 
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
